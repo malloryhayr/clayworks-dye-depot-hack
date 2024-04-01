@@ -19,7 +19,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -87,15 +86,13 @@ public abstract class DecoratedPotRendererMixin {
 			this.leftSide.render(poseStack, material.buffer(buffer, RenderType::entityCutout), p_273407_, p_273059_);
 			this.rightSide.render(poseStack, material.buffer(buffer, RenderType::entityCutout), p_273407_, p_273059_);
 
-			if (entity instanceof TrimmedPot trimmedPot && trimmedPot.getTrim().isPresent()) {
-				ResourceLocation trimKey = ForgeRegistries.ITEMS.getKey(trimmedPot.getTrim().get());
-				if (trimKey != null) {
-					Material trimMaterial = ClayworksMaterials.createTrimMaterial(new ResourceLocation(Clayworks.MOD_ID, "base"), trimKey.getNamespace() + "/" + trimKey.getPath());
-					this.frontSide.render(poseStack, trimMaterial.buffer(buffer, RenderType::entityCutout), p_273407_, p_273059_);
-					this.backSide.render(poseStack, trimMaterial.buffer(buffer, RenderType::entityCutout), p_273407_, p_273059_);
-					this.leftSide.render(poseStack, trimMaterial.buffer(buffer, RenderType::entityCutout), p_273407_, p_273059_);
-					this.rightSide.render(poseStack, trimMaterial.buffer(buffer, RenderType::entityCutout), p_273407_, p_273059_);
-				}
+			if (entity instanceof TrimmedPot trimmedPot && trimmedPot.getTrim() != null) {
+				ResourceLocation trimKey = trimmedPot.getTrim();
+				Material trimMaterial = ClayworksMaterials.createTrimMaterial(new ResourceLocation(Clayworks.MOD_ID, "base"), (trimKey.getNamespace() + "_" + trimKey.getPath()).replace("minecraft_", ""));
+				this.frontSide.render(poseStack, trimMaterial.buffer(buffer, RenderType::entityCutout), p_273407_, p_273059_);
+				this.backSide.render(poseStack, trimMaterial.buffer(buffer, RenderType::entityCutout), p_273407_, p_273059_);
+				this.leftSide.render(poseStack, trimMaterial.buffer(buffer, RenderType::entityCutout), p_273407_, p_273059_);
+				this.rightSide.render(poseStack, trimMaterial.buffer(buffer, RenderType::entityCutout), p_273407_, p_273059_);
 			}
 		}
 	}
