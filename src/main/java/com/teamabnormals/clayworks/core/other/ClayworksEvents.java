@@ -1,6 +1,5 @@
 package com.teamabnormals.clayworks.core.other;
 
-import com.teamabnormals.blueprint.core.other.tags.BlueprintItemTags;
 import com.teamabnormals.blueprint.core.util.BlockUtil;
 import com.teamabnormals.clayworks.common.block.TrimmedPot;
 import com.teamabnormals.clayworks.core.Clayworks;
@@ -85,7 +84,7 @@ public class ClayworksEvents {
 						event.setCanceled(true);
 					}
 				}
-			} else if (stack.is(BlueprintItemTags.TOOLS_PICKAXES) && ClayworksConfig.COMMON.decoratedPotTrims.get()) {
+			} else if (stack.is(ItemTags.PICKAXES) && ClayworksConfig.COMMON.decoratedPotTrims.get()) {
 				BlockEntity blockEntity = level.getBlockEntity(pos);
 				if (blockEntity instanceof TrimmedPot trimmedPot) {
 					Optional<Item> item = trimmedPot.getTrimItem(level);
