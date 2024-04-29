@@ -74,14 +74,10 @@ public class DecoratedPotBlockEntityMixin implements TrimmedPot {
 	private void setTag(CompoundTag tag) {
 		if (tag != null && tag.contains("trim")) {
 			this.setTrim(new ResourceLocation(tag.getString("trim")));
-		} else {
-			this.setTrim(null);
 		}
 
 		if (tag != null && tag.contains("trim_pattern")) {
 			this.setTrimPattern(new ResourceLocation(tag.getString("trim_pattern")));
-		} else {
-			this.setTrimPattern(null);
 		}
 	}
 }
