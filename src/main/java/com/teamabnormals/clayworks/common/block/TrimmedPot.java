@@ -13,6 +13,10 @@ public interface TrimmedPot {
 
 	void setTrim(ResourceLocation name);
 
+	ResourceLocation getTrimPattern();
+
+	void setTrimPattern(ResourceLocation name);
+
 	default Optional<TrimMaterial> getTrimMaterial(Level level) {
 		return Optional.ofNullable(level.registryAccess().registryOrThrow(Registries.TRIM_MATERIAL).get(this.getTrim()));
 	}
