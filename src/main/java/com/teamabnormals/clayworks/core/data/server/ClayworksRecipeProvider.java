@@ -2,6 +2,7 @@ package com.teamabnormals.clayworks.core.data.server;
 
 import com.google.common.collect.Maps;
 import com.teamabnormals.blueprint.core.api.conditions.ConfigValueCondition;
+import com.teamabnormals.blueprint.core.data.server.BlueprintRecipeProvider;
 import com.teamabnormals.clayworks.core.Clayworks;
 import com.teamabnormals.clayworks.core.other.ClayworksBlockFamilies;
 import com.teamabnormals.clayworks.core.registry.ClayworksRecipes.ClayworksRecipeSerializers;
@@ -31,7 +32,7 @@ import java.util.function.Consumer;
 import static com.teamabnormals.clayworks.core.ClayworksConfig.COMMON;
 import static com.teamabnormals.clayworks.core.registry.ClayworksBlocks.*;
 
-public class ClayworksRecipeProvider extends RecipeProvider {
+public class ClayworksRecipeProvider extends BlueprintRecipeProvider {
 	public static final ConfigValueCondition KILN_CONFIG = config(COMMON.kiln, "kiln");
 	public static final ConfigValueCondition CHISELED_BRICKS_CONFIG = config(COMMON.chiseledBricks, "chiseled_bricks");
 	public static final ConfigValueCondition GLAZED_TERRACOTTA_CONFIG = config(COMMON.glazedTerracotta, "glazed_terracotta");
@@ -39,7 +40,7 @@ public class ClayworksRecipeProvider extends RecipeProvider {
 	public static final ConfigValueCondition TERRACOTTA_BRICKS_CONFIG = config(COMMON.terracottaBricks, "terracotta_bricks");
 
 	public ClayworksRecipeProvider(PackOutput output) {
-		super(output);
+		super(Clayworks.MOD_ID, output);
 	}
 
 	@Override
@@ -142,10 +143,6 @@ public class ClayworksRecipeProvider extends RecipeProvider {
 
 	protected static void baking(Consumer<FinishedRecipe> consumer, RecipeCategory category, ItemLike ingredient, ItemLike result, float experience, int cookingTime) {
 		conditionalRecipe(consumer, category, KILN_CONFIG, baking(Ingredient.of(ingredient), category, result, experience, cookingTime).unlockedBy(getHasName(ingredient), has(ingredient)), new ResourceLocation(Clayworks.MOD_ID, getItemName(result) + "_from_baking"));
-	}
-
-	protected static RecipeBuilder verticalSlabBuilder(ItemLike item, Ingredient ingredient) {
-		return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, item, 6).define('#', ingredient).pattern("#").pattern("#").pattern("#");
 	}
 
 	protected static void generateConditionalRecipes(Consumer<FinishedRecipe> consumer, BlockFamily family, ICondition condition) {
