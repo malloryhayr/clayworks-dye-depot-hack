@@ -1,5 +1,6 @@
 package com.teamabnormals.clayworks.core.data.client;
 
+import com.ninni.dye_depot.registry.DDBlocks;
 import com.teamabnormals.blueprint.core.data.client.BlueprintBlockStateProvider;
 import com.teamabnormals.clayworks.core.Clayworks;
 import com.teamabnormals.clayworks.core.other.ClayworksBlockFamilies;
@@ -49,6 +50,22 @@ public class ClayworksBlockStateProvider extends BlueprintBlockStateProvider {
 		this.blockFamily(ClayworksBlockFamilies.GREEN_TERRACOTTA);
 		this.blockFamily(ClayworksBlockFamilies.RED_TERRACOTTA);
 		this.blockFamily(ClayworksBlockFamilies.BLACK_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.ROSE_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.MAROON_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.CORAL_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.GINGER_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.TAN_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.BEIGE_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.AMBER_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.OLIVE_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.FOREST_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.VERDANT_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.TEAL_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.MINT_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.AQUA_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.SLATE_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.NAVY_TERRACOTTA);
+		this.blockFamily(ClayworksBlockFamilies.INDIGO_TERRACOTTA);
 
 		this.blockFamily(ClayworksBlockFamilies.TERRACOTTA_BRICKS);
 		this.blockFamily(ClayworksBlockFamilies.WHITE_TERRACOTTA_BRICKS);
@@ -67,6 +84,22 @@ public class ClayworksBlockStateProvider extends BlueprintBlockStateProvider {
 		this.blockFamily(ClayworksBlockFamilies.GREEN_TERRACOTTA_BRICKS);
 		this.blockFamily(ClayworksBlockFamilies.RED_TERRACOTTA_BRICKS);
 		this.blockFamily(ClayworksBlockFamilies.BLACK_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.ROSE_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.MAROON_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.CORAL_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.GINGER_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.TAN_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.BEIGE_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.AMBER_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.OLIVE_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.FOREST_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.VERDANT_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.TEAL_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.MINT_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.AQUA_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.SLATE_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.NAVY_TERRACOTTA_BRICKS);
+		this.blockFamily(ClayworksBlockFamilies.INDIGO_TERRACOTTA_BRICKS);
 
 		this.decoratedPot(WHITE_DECORATED_POT, Blocks.WHITE_TERRACOTTA);
 		this.decoratedPot(ORANGE_DECORATED_POT, Blocks.ORANGE_TERRACOTTA);
@@ -84,6 +117,22 @@ public class ClayworksBlockStateProvider extends BlueprintBlockStateProvider {
 		this.decoratedPot(GREEN_DECORATED_POT, Blocks.GREEN_TERRACOTTA);
 		this.decoratedPot(RED_DECORATED_POT, Blocks.RED_TERRACOTTA);
 		this.decoratedPot(BLACK_DECORATED_POT, Blocks.BLACK_TERRACOTTA);
+		this.decoratedPot(ROSE_DECORATED_POT, DDBlocks.ROSE_TERRACOTTA.get());
+		this.decoratedPot(MAROON_DECORATED_POT, DDBlocks.MAROON_TERRACOTTA.get());
+		this.decoratedPot(CORAL_DECORATED_POT, DDBlocks.CORAL_TERRACOTTA.get());
+		this.decoratedPot(GINGER_DECORATED_POT, DDBlocks.GINGER_TERRACOTTA.get());
+		this.decoratedPot(TAN_DECORATED_POT, DDBlocks.TAN_TERRACOTTA.get());
+		this.decoratedPot(BEIGE_DECORATED_POT, DDBlocks.BEIGE_TERRACOTTA.get());
+		this.decoratedPot(AMBER_DECORATED_POT, DDBlocks.AMBER_TERRACOTTA.get());
+		this.decoratedPot(OLIVE_DECORATED_POT, DDBlocks.OLIVE_TERRACOTTA.get());
+		this.decoratedPot(FOREST_DECORATED_POT, DDBlocks.FOREST_TERRACOTTA.get());
+		this.decoratedPot(VERDANT_DECORATED_POT, DDBlocks.VERDANT_TERRACOTTA.get());
+		this.decoratedPot(TEAL_DECORATED_POT, DDBlocks.TEAL_TERRACOTTA.get());
+		this.decoratedPot(MINT_DECORATED_POT, DDBlocks.MINT_TERRACOTTA.get());
+		this.decoratedPot(AQUA_DECORATED_POT, DDBlocks.AQUA_TERRACOTTA.get());
+		this.decoratedPot(SLATE_DECORATED_POT, DDBlocks.SLATE_TERRACOTTA.get());
+		this.decoratedPot(NAVY_DECORATED_POT, DDBlocks.NAVY_TERRACOTTA.get());
+		this.decoratedPot(INDIGO_DECORATED_POT, DDBlocks.INDIGO_TERRACOTTA.get());
 	}
 
 	public void decoratedPot(RegistryObject<Block> block, Block parent) {

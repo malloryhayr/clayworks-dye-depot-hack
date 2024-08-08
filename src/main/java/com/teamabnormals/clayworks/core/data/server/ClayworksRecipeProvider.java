@@ -1,6 +1,8 @@
 package com.teamabnormals.clayworks.core.data.server;
 
 import com.google.common.collect.Maps;
+import com.ninni.dye_depot.registry.DDBlocks;
+import com.ninni.dye_depot.registry.DDItems;
 import com.teamabnormals.blueprint.core.api.conditions.ConfigValueCondition;
 import com.teamabnormals.blueprint.core.data.server.BlueprintRecipeProvider;
 import com.teamabnormals.clayworks.core.Clayworks;
@@ -70,6 +72,22 @@ public class ClayworksRecipeProvider extends BlueprintRecipeProvider {
 		terracottaBricksRecipes(consumer, Blocks.GREEN_TERRACOTTA, ClayworksBlockFamilies.GREEN_TERRACOTTA, ClayworksBlockFamilies.GREEN_TERRACOTTA_BRICKS, Items.GREEN_DYE);
 		terracottaBricksRecipes(consumer, Blocks.RED_TERRACOTTA, ClayworksBlockFamilies.RED_TERRACOTTA, ClayworksBlockFamilies.RED_TERRACOTTA_BRICKS, Items.RED_DYE);
 		terracottaBricksRecipes(consumer, Blocks.BLACK_TERRACOTTA, ClayworksBlockFamilies.BLACK_TERRACOTTA, ClayworksBlockFamilies.BLACK_TERRACOTTA_BRICKS, Items.BLACK_DYE);
+		terracottaBricksRecipes(consumer, DDBlocks.ROSE_TERRACOTTA.get(), ClayworksBlockFamilies.ROSE_TERRACOTTA, ClayworksBlockFamilies.ROSE_TERRACOTTA_BRICKS, DDItems.ROSE_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.MAROON_TERRACOTTA.get(), ClayworksBlockFamilies.MAROON_TERRACOTTA, ClayworksBlockFamilies.MAROON_TERRACOTTA_BRICKS, DDItems.MAROON_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.CORAL_TERRACOTTA.get(), ClayworksBlockFamilies.CORAL_TERRACOTTA, ClayworksBlockFamilies.CORAL_TERRACOTTA_BRICKS, DDItems.CORAL_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.GINGER_TERRACOTTA.get(), ClayworksBlockFamilies.GINGER_TERRACOTTA, ClayworksBlockFamilies.GINGER_TERRACOTTA_BRICKS, DDItems.GINGER_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.TAN_TERRACOTTA.get(), ClayworksBlockFamilies.TAN_TERRACOTTA, ClayworksBlockFamilies.TAN_TERRACOTTA_BRICKS, DDItems.TAN_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.BEIGE_TERRACOTTA.get(), ClayworksBlockFamilies.BEIGE_TERRACOTTA, ClayworksBlockFamilies.BEIGE_TERRACOTTA_BRICKS, DDItems.BEIGE_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.AMBER_TERRACOTTA.get(), ClayworksBlockFamilies.AMBER_TERRACOTTA, ClayworksBlockFamilies.AMBER_TERRACOTTA_BRICKS, DDItems.AMBER_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.OLIVE_TERRACOTTA.get(), ClayworksBlockFamilies.OLIVE_TERRACOTTA, ClayworksBlockFamilies.OLIVE_TERRACOTTA_BRICKS, DDItems.OLIVE_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.FOREST_TERRACOTTA.get(), ClayworksBlockFamilies.FOREST_TERRACOTTA, ClayworksBlockFamilies.FOREST_TERRACOTTA_BRICKS, DDItems.FOREST_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.VERDANT_TERRACOTTA.get(), ClayworksBlockFamilies.VERDANT_TERRACOTTA, ClayworksBlockFamilies.VERDANT_TERRACOTTA_BRICKS, DDItems.VERDANT_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.TEAL_TERRACOTTA.get(), ClayworksBlockFamilies.TEAL_TERRACOTTA, ClayworksBlockFamilies.TEAL_TERRACOTTA_BRICKS, DDItems.TEAL_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.MINT_TERRACOTTA.get(), ClayworksBlockFamilies.MINT_TERRACOTTA, ClayworksBlockFamilies.MINT_TERRACOTTA_BRICKS, DDItems.MINT_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.AQUA_TERRACOTTA.get(), ClayworksBlockFamilies.AQUA_TERRACOTTA, ClayworksBlockFamilies.AQUA_TERRACOTTA_BRICKS, DDItems.AQUA_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.SLATE_TERRACOTTA.get(), ClayworksBlockFamilies.SLATE_TERRACOTTA, ClayworksBlockFamilies.SLATE_TERRACOTTA_BRICKS, DDItems.SLATE_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.NAVY_TERRACOTTA.get(), ClayworksBlockFamilies.NAVY_TERRACOTTA, ClayworksBlockFamilies.NAVY_TERRACOTTA_BRICKS, DDItems.NAVY_DYE.get());
+		terracottaBricksRecipes(consumer, DDBlocks.INDIGO_TERRACOTTA.get(), ClayworksBlockFamilies.INDIGO_TERRACOTTA, ClayworksBlockFamilies.INDIGO_TERRACOTTA_BRICKS, DDItems.INDIGO_DYE.get());
 	}
 
 	public static void generateKilnRecipes(Consumer<FinishedRecipe> consumer) {
@@ -113,6 +131,23 @@ public class ClayworksRecipeProvider extends BlueprintRecipeProvider {
 		baking(consumer, RecipeCategory.DECORATIONS, Blocks.RED_TERRACOTTA, Blocks.RED_GLAZED_TERRACOTTA, 0.1F, 100);
 		baking(consumer, RecipeCategory.DECORATIONS, Blocks.WHITE_TERRACOTTA, Blocks.WHITE_GLAZED_TERRACOTTA, 0.1F, 100);
 		baking(consumer, RecipeCategory.DECORATIONS, Blocks.YELLOW_TERRACOTTA, Blocks.YELLOW_GLAZED_TERRACOTTA, 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.ROSE_TERRACOTTA.get(), DDBlocks.ROSE_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.MAROON_TERRACOTTA.get(), DDBlocks.MAROON_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.CORAL_TERRACOTTA.get(), DDBlocks.CORAL_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.GINGER_TERRACOTTA.get(), DDBlocks.GINGER_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.TAN_TERRACOTTA.get(), DDBlocks.TAN_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.BEIGE_TERRACOTTA.get(), DDBlocks.BEIGE_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.AMBER_TERRACOTTA.get(), DDBlocks.AMBER_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.OLIVE_TERRACOTTA.get(), DDBlocks.OLIVE_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.FOREST_TERRACOTTA.get(), DDBlocks.FOREST_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.VERDANT_TERRACOTTA.get(), DDBlocks.VERDANT_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.TEAL_TERRACOTTA.get(), DDBlocks.TEAL_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.MINT_TERRACOTTA.get(), DDBlocks.MINT_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.AQUA_TERRACOTTA.get(), DDBlocks.AQUA_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.SLATE_TERRACOTTA.get(), DDBlocks.SLATE_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.NAVY_TERRACOTTA.get(), DDBlocks.NAVY_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+		baking(consumer, RecipeCategory.DECORATIONS, DDBlocks.INDIGO_TERRACOTTA.get(), DDBlocks.INDIGO_GLAZED_TERRACOTTA.get(), 0.1F, 100);
+
 	}
 
 	private static void terracottaBricksRecipes(Consumer<FinishedRecipe> consumer, Block terracotta, BlockFamily family, BlockFamily bricksFamily, @Nullable Item dye) {

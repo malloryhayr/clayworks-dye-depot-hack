@@ -1,0 +1,36 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "clayworks:config",
+          "value": "terracotta_bricks"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "building",
+        "group": "stained_terracotta_bricks",
+        "key": {
+          "#": {
+            "item": "clayworks:terracotta_bricks"
+          },
+          "X": {
+            "item": "dye_depot:mint_dye"
+          }
+        },
+        "pattern": [
+          "###",
+          "#X#",
+          "###"
+        ],
+        "result": {
+          "count": 8,
+          "item": "clayworks:mint_terracotta_bricks"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

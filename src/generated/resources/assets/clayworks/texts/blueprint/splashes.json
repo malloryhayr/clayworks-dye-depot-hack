@@ -4,6 +4,10 @@
     "text": "The clay works!"
   },
   {
+    "type": "blueprint:literal",
+    "text": "Ask me about my dyes"
+  },
+  {
     "type": "clayworks:woodworks"
   }
 ]

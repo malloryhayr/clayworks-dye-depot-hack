@@ -14,6 +14,7 @@ public final class ClayworksSplashProvider extends SplashProvider {
 	@Override
 	protected void registerSplashes() {
 		this.add("The clay works!");
+		this.add("Ask me about my dyes");
 		this.add(WoodworksSplash.INSTANCE);
 	}
 }
